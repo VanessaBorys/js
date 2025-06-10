@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+            <!DOCTYPE html>
+            <html lang="pl">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Zadanie 39</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                    }
+                    .menu {
+                        color: green;
+                        font-size: 24px;
+                    }
+                    .red {
+                        color: red;
+                        font-size: 32px;
+                    }
+                    .blue {
+                        color: blue;
+                        font-size: 16px;
+                    }
+                </style>
+            </head>
+            <body>
+            
+                <p class="menu"><b>Menu</b></p>
+                <p class="red">1 - Czerwony</p>
+                <p class="blue">2 - Niebieski</p>
+            
+                <input type="text" id="opcja_bor" placeholder="Wpisz numer lub kolor">
+                <button onclick="sprawdz_bor()">Sprawdź</button>
+            
+                <div id="wynik"></div>
+            
+                <script>
+                    function sprawdz_bor() {
+                        var opcja_bor = document.getElementById("opcja_bor").value.toLowerCase();
+                        var wynikDiv = document.getElementById("wynik");
+            
+                        if (opcja_bor == "1" || opcja_bor == "czerwony") {
+                            wynikDiv.innerHTML = '<h1 style="color: red;">Wczytałeś kolor czerwony</h1>';
+                        } else if (opcja_bor == "2" || opcja_bor == "niebieski") {
+                            wynikDiv.innerHTML = '<h6 style="color: blue;">Wczytałeś kolor niebieski</h6>';
+                        } else {
+                            wynikDiv.innerHTML = '<p style="color: black;">Niepoprawny wybór!</p>';
+                        }
+                    }
+                </script>
+            
+            </body>
+            </html>
+            
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

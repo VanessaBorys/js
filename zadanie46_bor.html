@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sprawdzenie danych Borys </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            var a_bor, h_bor;
+            do {
+                var liczba1 = prompt("wysokość=", "");
+                h_bor = parseFloat(liczba1);
+            } while (h_bor <= 0);
+
+            do {
+                var liczba2 = prompt("podstawę=", "");
+                a_bor = parseFloat(liczba2);
+            } while (!(a_bor > 0));
+
+            var Pole = a_bor * h_bor / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "<br>");
+        </script>
+    </div>
+</body>
+
+</html>

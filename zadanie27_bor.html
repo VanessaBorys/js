@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 27</title>
+    <script language="JavaScript">
+
+        function KatStartu_borys(odl_borys, droga_borys) {
+            odl_borys = parseFloat(odl_borys);
+            droga_borys = parseFloat(droga_borys);
+            var kat = (Math.asin(odl_borys / droga_borys) * 180 / Math.PI).toFixed(2);
+            document.getElementsByName('alfa_borys')[0].value = kat;
+            document.getElementById("wynikKat").innerText = "Kąt startu = " + kat + "°";
+        }
+
+
+        function Wysokosc_borys(odl_borys, droga_borys) {
+            odl_borys = parseFloat(odl_borys);
+            droga_borys = parseFloat(droga_borys);
+            var wysokosc = Math.sqrt(Math.pow(droga_borys, 2) - Math.pow(odl_borys, 2)).toFixed(2);
+            document.getElementsByName('wys_borys')[0].value = wysokosc;
+            document.getElementById("wynikWysokosc").innerText = "Wysokość = " + wysokosc + " m";
+        }
+
+
+        function obliczSamolot() {
+            var odl = document.formularz.odleglosc.value;
+            var droga = document.formularz.droga.value;
+
+            KatStartu_borys(odl, droga);
+            Wysokosc_borys(odl, droga);
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Obliczenie wysokości i kąta startu samolotu</h1>
+        <form name="formularz" onsubmit="obliczSamolot(); return false;">
+            Podaj odległość (odl_borys) = <input type="text" size="6" name="odleglosc"> m<br><br>
+            Podaj drogę (droga_borys) = <input type="text" size="6" name="droga"> m<br><br>
+
+            <input type="submit" value="Oblicz"><br><br>
+
+            Wysokość = <input type="text" size="6" name="wys_borys"> m<br><br>
+            Kąt startu = <input type="text" size="6" name="alfa_borys">°<br><br>
+
+            <p id="wynikWysokosc"></p>
+            <p id="wynikKat"></p>
+        </form>
+    </center>
+</body>
+</html>

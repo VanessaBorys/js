@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Przykład użycia pętli</title>
+    <style>
+        .nazwisko {
+            color: red;
+            font-size: 2cm;
+        }
+
+        .temat {
+            color: blue;
+            font-size: 5mm;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nazwisko">Vanessa Borys</div>
+    <div class="temat">Wyprowadzanie liczb od 1 do 10 przesuniętych o jedną spację w prawo. Demonstracja pętli
+        zagnieżdżonych.</div>
+    <script>
+        for (var i = 1; i <= 10; i++) {
+            for (var k = 1; k <= i; k++) {
+                document.write("&nbsp;");
+            }
+            document.write(i + "<br>");
+        }
+    </script>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

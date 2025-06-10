@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+            <!DOCTYPE html>
+
+            <head>
+                <title> Zadanie 18 Borys </title>
+                <meta charset="utf-8">
+            </head>
+            
+            <body>
+                <div style="color:navy;font-size:55px;">
+                    <script language="JavaScript">
+                        var a_bor = parseFloat(prompt("a=", ""));
+                        var b_bor = parseFloat(prompt("b=", ""));
+                        function dodawanie_bor(a_bor, b_bor) {
+                            return a_bor + b_bor;
+                        }
+                        function odejmowanie_bor(a_bor, b_bor) {
+                            return a_bor - b_bor;
+                        }
+                        function mnozenie_bor(a_bor, b_bor) {
+                            return a_bor * b_bor;
+                        }
+                        function od_kwadratu_bor(a_bor, b_bor) {
+                            return (a_bor * a_bor)+ (b_bor * b_bor);
+                        }         
+                        document.write("suma=" + dodawanie_bor(a_bor, b_bor) + "<br>");
+                        document.write("odejmowanie=" + odejmowanie_bor(a_bor, b_bor) + "<br>");
+                        document.write("mnozenie=" + mnozenie_bor(a_bor, b_bor) + "<br>");
+                        document.write("do kwadratu=" + od_kwadratu_bor(a_bor, b_bor) + "<br>");
+                    </script>
+                </div>
+            </body>
+            
+            </html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

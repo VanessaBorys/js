@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31</title>
+    <script type="text/javascript">
+        var Ciezarowka = {
+            ladownosc: "10 ton",
+            marka: "Volvo",
+            rok_produkcji: 2020,
+
+
+            Ciezarowka_wyswietl_borys: function () {
+                document.write("Ladownosc: " + this.ladownosc + "<br>");
+                document.write("Marka: " + this.marka + "<br>");
+                document.write("Rok produkcji: " + this.rok_produkcji + "<br>");
+            }
+        };
+
+
+        Ciezarowka.kolor = "czerwony";
+
+
+        Ciezarowka.Ciezarowka_pokaz_borys = function () {
+            document.write("Kolor: " + this.kolor + "<br>");
+        };
+
+
+        function wyswietlObiekt() {
+            Ciezarowka.Ciezarowka_wyswietl_borys();
+            Ciezarowka.Ciezarowka_pokaz_borys();
+        }
+    </script>
+</head>
+<body>
+    <h1>Zadanie 31 - Ciezarowka</h1>
+    <p>Obiekt: Ciezarowka</p>
+    <p>Pola (Właściwości):</p>
+    <ul>
+        <li>ladownosc</li>
+        <li>marka</li>
+        <li>rok_produkcji</li>
+        <li>kolor (dodane poza ciałem obiektu)</li>
+    </ul>
+    <p>Metody:</p>
+    <ul>
+        <li>Ciezarowka_wyswietl_borys</li>
+        <li>Ciezarowka_pokaz_borys (dodana poza ciałem obiektu)</li>
+    </ul>
+
+    <button onclick="wyswietlObiekt()">Uruchom zadanie</button>
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

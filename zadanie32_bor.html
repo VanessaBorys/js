@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 32</title>
+    <script type="text/javascript">
+
+        function Ciezarowka(marka, ladownosc, rok_produkcji) {
+            this.marka = marka;
+            this.ladownosc = ladownosc;
+            this.rok_produkcji = rok_produkcji;
+        }
+
+
+        Ciezarowka.prototype.Ciezarowka_wyswietl_borys = function () {
+            document.write("Marka: " + this.marka + "<br>");
+            document.write("Ladownosc: " + this.ladownosc + "<br>");
+            document.write("Rok produkcji: " + this.rok_produkcji + "<br>");
+        };
+
+
+        Ciezarowka.prototype.kolor = "czerwony";
+
+        
+        Ciezarowka.prototype.Ciezarowka_pokaz_borys = function () {
+            document.write("Kolor: " + this.kolor + "<br>");
+        };
+
+        
+        function wyswietlObiekty() {
+            
+            var ciezarowka1 = new Ciezarowka("Volvo", "10 ton", 2020);
+            var ciezarowka2 = new Ciezarowka("MAN", "15 ton", 2018);
+            var ciezarowka3 = new Ciezarowka("Scania", "12 ton", 2019);
+
+            
+            document.write("<h2>Ciezarowka 1:</h2>");
+            ciezarowka1.Ciezarowka_wyswietl_borys();
+            ciezarowka1.Ciezarowka_pokaz_borys();
+
+            document.write("<h2>Ciezarowka 2:</h2>");
+            ciezarowka2.Ciezarowka_wyswietl_borys();
+            ciezarowka2.Ciezarowka_pokaz_borys();
+
+            document.write("<h2>Ciezarowka 3:</h2>");
+            ciezarowka3.Ciezarowka_wyswietl_borys();
+            ciezarowka3.Ciezarowka_pokaz_borys();
+        }
+    </script>
+</head>
+<body>
+    <h1>Zadanie 32 - Ciezarowka</h1>
+    <p>Obiekt: Ciezarowka</p>
+    <p>Pola (Właściwości):</p>
+    <ul>
+        <li>marka</li>
+        <li>ladownosc</li>
+        <li>rok_produkcji</li>
+        <li>kolor (dodane poza ciałem obiektu)</li>
+    </ul>
+    <p>Metody:</p>
+    <ul>
+        <li>Ciezarowka_wyswietl_borys</li>
+        <li>Ciezarowka_pokaz_borys (dodana poza ciałem obiektu)</li>
+    </ul>
+
+    <button onclick="wyswietlObiekty()">Uruchom zadanie</button>
+</body>
+</html>

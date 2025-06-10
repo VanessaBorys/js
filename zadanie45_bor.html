@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 45 Borys</title>
+</head>
+
+<body>
+    <script>
+        var koniec_petli_bor = 11;
+        var dana = parseInt(prompt("Podaj liczbę:"), 10);
+
+
+        for (let i_bor = 1; i_bor <= koniec_petli_bor; i_bor++) {
+            if (dana % 2 == 0) {
+                document.write(`<span style="font-size: 42px; color: blue" >Borys</span><br>`);
+            } else {
+                document.write(`<span style="font-size: 42px; color: green">Vanessa</span><br>`);
+            }
+        }
+    </script>
+</body>
+
+</html>

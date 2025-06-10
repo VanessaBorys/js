@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Silnia - Vanessa Borys</title>
+</head>
+
+<body>
+    <script>
+        let n_bor = parseInt(prompt("Podaj liczbę n:"));
+        let silnia_bor = 1;
+
+        if (n_bor === 0) {
+            silnia_bor = 1;
+        } else if (n_bor > 0) {
+            for (let i = 1; i <= n_bor; i++) {
+                silnia_bor *= i;
+            }
+        } else {
+            document.write("Podaj liczbę n >= 0");
+            throw "";
+        }
+
+        document.write(n_bor + "! = " + silnia_bor);
+    </script>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

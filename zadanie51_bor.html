@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Powtarzanie inicjałów</title>
+    <style>
+        .nazwisko {
+            color: red;
+            font-size: 2cm;
+        }
+
+        .temat {
+            color: blue;
+            font-size: 5mm;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nazwisko">Vanessa Borys</div>
+    <div class="temat">Powtarzanie inicjałów z liczbą spacji i formatem liczba_inicjały_liczba</div>
+    <script>
+        var ile = parseInt(prompt("Ile razy powtórzyć napis?"));
+        var tekst = prompt("Podaj tekst (np. Twoje inicjały):");
+        for (var i = 1; i <= ile; i++) {
+            for (var k = 1; k <= i; k++) {
+                document.write("&nbsp;");
+            }
+            document.write(i + "_" + tekst + "_" + i + "<br>");
+        }
+    </script>
+</body>
+
+</html>

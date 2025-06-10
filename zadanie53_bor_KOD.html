@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let a_bor = parseInt(prompt("Podaj wysokość prostokąta (a):"));
+        let b_bor = parseInt(prompt("Podaj szerokość prostokąta (b):"));
+
+
+        for (let i = 0; i < b_bor; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+
+        let wiersz_bor = "*";
+        for (let i = 1; i <= (b_bor - 2); i++) {
+            wiersz_bor = wiersz_bor + "&nbsp;&nbsp;";
+        }
+        wiersz_bor = wiersz_bor + "*";
+
+
+        for (let i = 0; i < a_bor - 2; i++) {
+            document.write(wiersz_bor + "<br>");
+        }
+
+
+        for (let i = 0; i < b_bor; i++) {
+            document.write("*");
+        }
+    </script>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

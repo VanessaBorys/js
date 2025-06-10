@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 26</title>
+    <script language="JavaScript">
+
+        function Pow_borys(a_borys, b_borys, h_borys) {
+            a_borys = parseFloat(a_borys);
+            b_borys = parseFloat(b_borys);
+            h_borys = parseFloat(h_borys);
+
+
+            var pole = (Math.abs(a_borys + b_borys) * h_borys) / 2;
+            document.getElementsByName('Pole')[0].value = pole.toFixed(2);
+            document.getElementById("wynikPole").innerText = "Pole = " + pole.toFixed(2) + " cm²";
+        }
+
+
+        function Obw_borys(a_borys, b_borys, h_borys) {
+            a_borys = parseFloat(a_borys);
+            b_borys = parseFloat(b_borys);
+            h_borys = parseFloat(h_borys);
+
+ 
+            var x = Math.abs(a_borys - b_borys) / 2;
+            var ramie = Math.sqrt(Math.pow(x, 2) + Math.pow(h_borys, 2));
+
+
+            var obwod = a_borys + b_borys + 2 * ramie;
+            document.getElementsByName('Obwod')[0].value = obwod.toFixed(2);
+            document.getElementById("wynikObwod").innerText = "Obwód = " + obwod.toFixed(2) + " cm";
+        }
+
+        function obliczTrapez() {
+            var a = document.formularz.a.value;
+            var b = document.formularz.b.value;
+            var h = document.formularz.h.value;
+
+            Pow_borys(a, b, h);
+            Obw_borys(a, b, h);
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Obliczenie pola i obwodu trapezu równoramiennego</h1>
+        <form name="formularz" onsubmit="obliczTrapez(); return false;">
+            Podaj a = <input type="text" size="6" name="a"> cm<br><br>
+            Podaj b = <input type="text" size="6" name="b"> cm<br><br>
+            Podaj h = <input type="text" size="6" name="h"> cm<br><br>
+
+            <input type="submit" value="Oblicz"><br><br>
+
+            Pole = <input type="text" size="6" name="Pole"> cm²<br><br>
+            Obwód = <input type="text" size="6" name="Obwod"> cm<br><br>
+
+            <p id="wynikPole"></p>
+            <p id="wynikObwod"></p>
+        </form>
+    </center>
+</body>
+</html>

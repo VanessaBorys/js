@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Pole i obwód prostokąta</title>
+</head>
+<body>
+    <h1>Pole i obwód prostokąta</h1>
+    <br><br>
+    <label for="a_dana_bor">Podaj długość boku a:</label>
+    <input type="text" id="a_dana_bor" placeholder="podaj a"> cm<br><br>
+    <label for="b_dana_bor">Podaj długość boku b:</label>
+    <input type="text" id="b_dana_bor" placeholder="podaj b"> cm<br><br><br>
+
+    <input type="button" value="Oblicz pole" onclick="pole_borys()"><br><br>
+    <input type="button" value="Oblicz obwód" onclick="obwod_borys()"><br><br><br>
+
+    <table>
+        <tr><td id="wprowadz_pole_bor"></td></tr>
+        <tr><td id="wprowadz_obwod_bor"></td></tr>
+    </table>
+
+    <script type="text/javascript">
+        function pole_borys() {
+            var a_bor = parseFloat(document.getElementById('a_dana_bor').value);
+            var b_bor = parseFloat(document.getElementById('b_dana_bor').value);
+            var pole = a_bor * b_bor;
+            document.getElementById("wprowadz_pole_bor").innerHTML = "Pole = " + pole.toFixed(2) + " cm²";
+        }
+
+        function obwod_borys() {
+            var a_bor = parseFloat(document.getElementById('a_dana_bor').value);
+            var b_bor = parseFloat(document.getElementById('b_dana_bor').value);
+            var obwod = (a_bor * 2) + (b_bor * 2);
+            document.getElementById("wprowadz_obwod_bor").innerHTML = "Obwód = " + obwod.toFixed(2) + " cm";
+        }
+    </script>
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

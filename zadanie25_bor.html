@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 25</title>
+</head>
+<body>
+    <div style="color: blue; font-size: 50px;">
+        <script>
+            var n_bor = parseFloat(prompt("Podaj N0 (ilość początkową atomów):", "sztuki"));
+            var t_bor = parseFloat(prompt("Podaj t (czas w latach):", "lata"));
+            var t1t2_bor = parseFloat(prompt("Podaj T1/2 (okres połowicznego rozpadu w latach):", "lata"));
+
+            function Lambda(t1t2_bor) {
+                return (Math.log(2)) / t1t2_bor;
+            }
+
+            function euler(t_bor, n_bor, t1t2_bor) {
+                var lambda = Lambda(t1t2_bor);
+                var potega = -lambda * t_bor;
+                var e = Math.pow(Math.E, potega);
+                return n_bor * e;
+            }
+            document.write("N0 = " + n_bor.toFixed(2) + " (sztuk) <br>");
+            document.write("t = " + t_bor.toFixed(2) + " (lat) <br>");
+            document.write("T1/2 = " + t1t2_bor.toFixed(2) + " (lat) <br>");
+            document.write("Lambda (λ) = " + Lambda(t1t2_bor).toFixed(7) + " (1/rok) <br>");
+            document.write("N = " + euler(t_bor, n_bor, t1t2_bor).toFixed(7) + " (sztuk)");
+        </script>
+    </div>
+</body>
+</html>

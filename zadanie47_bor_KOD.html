@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 - Sprawdzanie trójkąta</title>
+</head>
+
+<body>
+    <h2>Sprawdzanie boków trójkąta</h2>
+    <script>
+        let a_bor, b_bor, c_bor;
+        do {
+            a_bor = parseFloat(prompt("Podaj bok a:"));
+            b_bor = parseFloat(prompt("Podaj bok b:"));
+            c_bor = parseFloat(prompt("Podaj bok c:"));
+        } while (
+            !(a_bor > 0 && b_bor > 0 && c_bor > 0 && a_bor + b_bor > c_bor && a_bor + c_bor > b_bor && b_bor + c_bor > a_bor)
+        );
+        alert("Podane boki tworzą trójkąt: " + a_bor + ", " + b_bor + ", " + c_bor);
+    </script>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

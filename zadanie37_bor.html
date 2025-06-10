@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 37</title>
+    <style>
+        .dobrze { color: blue; font-size: 30px; }
+        .zle { color: red; font-size: 30px; }
+    </style>
+</head>
+<body>
+    <script>
+        var rok_bor = prompt("Podaj rok powstania JavaScript:", "");
+        var rok = parseInt(rok_bor);
+        document.write("Wczytany rok: " + rok + "<br>");
+        if (rok === 1995) {
+            document.write('<p class="dobrze">Brawo, znasz rok powstania JavaScript!</p>');
+        } else {
+            document.write('<p class="zle">Źle, musisz jeszcze poczytać!</p>');
+        }
+    </script>
+</body>
+</html>

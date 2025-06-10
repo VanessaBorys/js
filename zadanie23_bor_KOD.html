@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 23</title>
+    <script type="text/javascript">
+        function obliczDrabine() {
+            var d_borys = parseFloat(document.getElementById('d_borys').value);
+            var x_borys = parseFloat(document.getElementById('x_borys').value);
+
+
+
+            var dlugoscDrabiny = Math.sqrt(d_borys * d_borys + x_borys * x_borys);
+            document.getElementById('drabina_wynik').innerText = dlugoscDrabiny.toFixed(2);
+
+            var katAlfa = Math.atan(d_borys / x_borys) * 180 / Math.PI;
+            document.getElementById('alfa_wynik').innerText = katAlfa.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Obliczanie odległości od drabiny i kąta</h1>
+    <p>Podaj d= <input type="text" id="d_borys"> cm</p>
+    <p>Podaj x= <input type="text" id="x_borys"> cm</p>
+    <p><input type="button" value="Oblicz" onclick="obliczDrabine()"></p>
+
+    <p>Drabina= <span id="drabina_wynik"></span> cm</p>
+    <p>Alfa= <span id="alfa_wynik"></span>°</p>
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
