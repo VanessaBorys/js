@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_borys() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="borys" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let a_bor = parseInt(prompt("Podaj pierwszą liczbę"));
+        let b_bor = parseInt(prompt("Podaj drugą liczbę"));
+
+        if (a_bor == b_bor) {
+            confirm("Liczby są równe, brak obliczeń");
+        } else {
+            if (a_bor < b_bor) {
+                for (let i_bor = a_bor; i_bor <= b; i_bor++) {
+                    if (i_bor % 2 !== 0) {
+                        document.write("<font color='green'>" + i_bor + "</font><br>");
+                    }
+                }
+            } else {
+                for (let i_bor = a_bor; i_bor >= b_bor; i_bor--) {
+                    if (i_bor % 2 !== 0) {
+                        document.write("<font color='blue'><small>" + i_bor + "</small></font><br>");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_borys()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
